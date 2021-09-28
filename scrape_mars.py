@@ -80,7 +80,7 @@ def scrape():
         soup = bs(html, 'html.parser')
         partial = soup.find("img", class_="wide-image")["src"]
         img_title = soup.find("h2",class_="title").text
-        img_url = 'https://marshemispheres.com'+ partial
+        img_url = 'https://marshemispheres.com/'+ partial
         dictionary={"title":img_title,"img_url":img_url}
         hemisphere_image_urls.append(dictionary)
         browser.back()
